@@ -1,0 +1,35 @@
+<settings>
+<servers>
+  <server>
+    <id>arasdomain-deployRepo</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>arasdomain-deployRepo</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>arasdomain-deployRepo</id>
+        <url>https://arasdomain-864899852759.d.codeartifact.eu-west-2.amazonaws.com/maven/deployRepo/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+<mirrors>
+  <mirror>
+    <id>arasdomain-deployRepo</id>
+    <name>arasdomain-deployRepo</name>
+    <url>https://arasdomain-864899852759.d.codeartifact.eu-west-2.amazonaws.com/maven/deployRepo/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+
+
+</settings>
